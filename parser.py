@@ -80,9 +80,9 @@ def parse_file( fname, edges, transform, screen, color ):
             add_box(edges, float(args[0]), float(args[1]), float(args[2]),
               float(args[3]), float(args[4]), float(args[5]))
         elif line == 'sphere':
-            add_sphere(edges,float(args[0]), float(args[1]), float(args[2]), float(args[3]), 100)
+            add_sphere(edges,float(args[0]), float(args[1]), float(args[2]), float(args[3]), 50)
         elif line == 'torus':
-            add_torus(edges,float(args[0]), float(args[1]), float(args[2]), float(args[3]), float(args[4]), 100 )
+            add_torus(edges,float(args[0]), float(args[1]), float(args[2]), float(args[3]), float(args[4]), 50 )
         elif line == 'line':            
             #print 'LINE\t' + str(args)
 
@@ -130,3 +130,10 @@ def parse_file( fname, edges, transform, screen, color ):
         c+= 1
 
 
+screen = new_screen()
+color = [66, 206, 244]
+edges = []
+transform = new_matrix()
+parse_file( 's', edges, transform, screen, color )
+draw_lines(edges, screen, color)
+save_ppm(screen, 'img.ppm')
