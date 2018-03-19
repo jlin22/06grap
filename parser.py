@@ -130,10 +130,10 @@ def parse_file( fname, edges, transform, screen, color ):
         c+= 1
 
 
-screen = new_screen()
+'''screen = new_screen()
 color = [66, 206, 244]
 edges = []
 transform = new_matrix()
 parse_file( 's', edges, transform, screen, color )
 draw_lines(edges, screen, color)
-save_ppm(screen, 'img.ppm')
+save_ppm(screen, 'img.ppm')'''
